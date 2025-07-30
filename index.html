@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coffee Vibes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --coffee-brown: #6f4e37;
+      --light-beige: #fef5e7;
+      --gold: #f4c542;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 15px 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    nav a {
+      color: #fff;
+      font-size: 17px;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      background-color: transparent;
+      transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    nav a:hover {
+      background-color: var(--gold);
+      color: #2d2d2d;
+      transform: scale(1.05);
+      border-color: var(--gold);
+    }
+
+    nav a.active {
+      background-color: var(--gold);
+      color: #000;
+      border: 2px solid #000;
+      transform: scale(1.05);
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 50px 30px;
+      border-radius: 15px;
+      margin: 120px auto 60px;
+      max-width: 650px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .logo {
+      font-family: 'Pacifico', cursive;
+      font-size: 50px;
+      color: var(--gold);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .logo span {
+      font-size: 42px;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-top: 10px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+      color: #f3f3f3;
+      margin-top: 20px;
+    }
+
+    .tagline {
+      font-style: italic;
+      color: #dcdcdc;
+      font-size: 18px;
+    }
+
+    .story-section {
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 40px auto;
+      padding: 60px 30px;
+      max-width: 800px;
+      border-radius: 15px;
+      text-align: left;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .story-section h2 {
+      font-size: 32px;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .story-section p {
+      font-size: 18px;
+      color: #f0f0f0;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .container,
+      .story-section {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .story-section h2 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ <nav>
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="about.html" class="active">About</a>
+    <a href="info.html">Info</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="container" id="home">
+    <div class="logo">
+      ☕ <span>COZY CAFE</span>
+    </div>
+    <h1>Welcome, Coffee Lover!</h1>
+    <p class="tagline">Where every cup tells a story.</p>
+    <p>
+      Discover warm vibes, rich brews, and your new favorite chill spot.
+      Whether you're working, relaxing, or catching up with friends,
+      Brew & Chill is your perfect coffee hideaway.
+    </p>
+  </div>
+
+  <!-- Scrollable Story Section -->
+  <div class="story-section">
+    <h2>Our Story</h2>
+    <p>
+      Cozy Cafe began as a small espresso cart in the heart of Osaka, Japan. Inspired by slow mornings and meaningful conversations, 
+      we’ve grown into a cozy café known for our handcrafted brews and inviting atmosphere.
+    </p>
+    <p>
+      Our founders believed that coffee is more than just a drink — it’s a moment, a pause, a connection. 
+      Today, COZY CAFE continues to celebrate that spirit by sourcing premium beans from around the world, 
+      blending tradition with modern coffee culture.
+    </p>
+    <p>
+      Whether you're here for your daily pick-me-up or a place to unwind with friends, 
+      we welcome you with open arms — and a warm cup of coffee.
+    </p>
+  </div>
+
+</body>
+</html>

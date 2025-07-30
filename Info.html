@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Brew & Chill</title>
+  <style>
+    :root {
+      --coffee-brown: #6f4e37;
+      --light-beige: #fef5e7;
+      --gold: #f4c542;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Georgia', serif;
+      color: #f1f1f1;
+      text-align: center;
+      backdrop-filter: brightness(0.6);
+      min-height: 100vh;
+      padding-top: 60px;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 15px 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      z-index: 1000;
+      backdrop-filter: blur(5px);
+    }
+
+    nav a {
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 6px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    nav a.active {
+      background-color: var(--gold);
+      color: #000;
+      transform: scale(1.1);
+    }
+
+    nav a:hover {
+      background-color: #f4c542;
+      color: #000;
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    .about-container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 50px 20px;
+      border-radius: 12px;
+      max-width: 1000px;
+      margin: 30px auto 50px;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+
+    /* Video Section */
+    .video-section {
+      margin-top: 50px;
+    }
+
+    .video-section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .coffee-menu {
+      margin-top: 60px;
+    }
+
+    .coffee-menu h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .coffee-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+      justify-items: center;
+    }
+
+    .coffee-item {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      width: 100%;
+      max-width: 220px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1;
+      user-select: none;
+    }
+
+    .coffee-item:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4);
+      z-index: 2;
+    }
+
+    .coffee-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .coffee-item h3 {
+      margin: 12px 0 0;
+      font-size: 18px;
+      color: #f1f1f1;
+    }
+
+    .coffee-item:hover h3 {
+      color: #f4c542;
+    }
+
+    /* Modal Styles (same as before) */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.75);
+      backdrop-filter: blur(6px);
+    }
+
+    .modal-content {
+      position: relative;
+      margin: 10% auto;
+      padding: 40px 30px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 500px;
+      color: #fff;
+      box-shadow: 0 0 30px rgba(0,0,0,0.7);
+      text-align: left;
+      font-family: 'Georgia', serif;
+      background-blend-mode: multiply;
+      background-color: rgba(0,0,0,0.6);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .modal-content h2 {
+      margin-top: 0;
+      font-size: 36px;
+    }
+
+    .modal-content p {
+      font-size: 18px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      color: #f4c542;
+    }
+  </style>
+</head>
+<body>
+ <nav>
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="about.html">About</a>
+    <a href="info.html">Info</a>
+    <a href="contact.html" class="active">Contact Us</a>
+  </nav>
+
+  <div class="about-container">
+    <h1>About COZY CAFE</h1>
+    <p>COZY CAFE isn't just a coffee shop — it's a moment of calm in a fast-paced world. Nestled in the heart of the community, we blend rich coffee traditions with a cozy, modern vibe. From the first crack of the beans to the final pour, every cup is brewed with heart.</p>
+    <p>Whether you're here for a deep conversation, quiet study time, or just a break from the buzz, our shop is your space. With hand-crafted drinks, warm pastries, and baristas who remember your name, Brew & Chill is more than a coffee stop — it’s your daily retreat.</p>
+
+    <div class="video-section">
+      <h2></h2>
+      <div class="video-wrapper">
+        <iframe src="c:\Users\acer\Downloads\Cinematic Coffee B Roll - Sony A7S III + 16-35mm F4.mp4" title="Brew & Chill - Our Story" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="coffee-menu">
+      <h2>Here's the process behind crafting the finest coffee in town.</h2>
+      <div class="coffee-grid" id="coffeeGrid">
+        <!-- Your coffee items stay here (unchanged from your current code) -->
+        <!-- Just make sure to replace local image paths with online URLs -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="coffeeModal">
+    <div class="modal-content" id="modalContent">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalStory"></p>
+    </div>
+  </div>
+
+  <script>
+    const coffeeItems = document.querySelectorAll('.coffee-item');
+    const modal = document.getElementById('coffeeModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalStory = document.getElementById('modalStory');
+    const modalContent = document.getElementById('modalContent');
+    const closeModalBtn = document.getElementById('closeModal');
+
+    

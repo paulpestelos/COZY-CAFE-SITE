@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Profile - Brew & Chill</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --coffee-brown: #6f4e37;
+      --gold: #f4c542;
+      --cream: #fdf3e7;
+    }
+
+    * {
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: url('https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      z-index: 1000;
+      backdrop-filter: blur(5px);
+    }
+
+    nav a {
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 6px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    nav a.active {
+      background-color: var(--gold);
+      color: #000;
+      transform: scale(1.1);
+    }
+
+    nav a:hover {
+      background-color: var(--gold);
+      color: #000;
+      transform: scale(1.1);
+    }
+
+    .section {
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 100px auto 60px;
+      padding: 60px 30px;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    .section:nth-of-type(2) { animation-delay: 0.3s; }
+    .section:nth-of-type(3) { animation-delay: 0.6s; }
+    .section:nth-of-type(4) { animation-delay: 0.9s; }
+    .section:nth-of-type(5) { animation-delay: 1.2s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1, h2 {
+      color: var(--gold);
+      font-family: 'Pacifico', cursive;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #f0f0f0;
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 20px;
+      color: #e8e8e8;
+      margin-top: 30px;
+    }
+
+    .testimonials {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .testimonial {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .testimonial p {
+      font-size: 16px;
+      color: #f4f4f4;
+    }
+
+    .testimonial .name {
+      font-weight: bold;
+      color: var(--gold);
+    }
+
+    .instagram-feed {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .instagram-feed iframe {
+      width: 100%;
+      max-width: 400px;
+      height: 500px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .coffee-menu dl {
+      display: inline-block;
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .coffee-menu dt {
+      font-weight: bold;
+      color: var(--gold);
+    }
+
+    .coffee-menu dd {
+      margin: 5px 0 15px;
+      color: #f0f0f0;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .section {
+        padding: 40px 20px;
+        margin: 120px 10px;
+      }
+
+      h1, h2 {
+        font-size: 26px;
+      }
+
+      p {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ <nav>
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="about.html" class="active">About</a>
+    <a href="info.html">Info</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <!-- Appreciation Section -->
+  <section class="section" id="appreciation">
+    <h1>Words of Appreciation</h1>
+    <p>
+      Every visitor, smile, and “thank you” means the world to us.
+      You are the warmth behind every brew, the soul of Brew & Chill.
+    </p>
+    <p>
+      To our community: thank you for believing in this small dream turned cozy corner café.
+    </p>
+    <div class="quote">“A warm cup and kind soul go hand in hand.”</div>
+  </section>
+
+  <!-- Word of the Day -->
+  <section class="section" id="word-of-the-day">
+    <h2>☀ Word of the Day</h2>
+    <p><strong>“Steeped”</strong> — not just how we brew our tea, but how deeply we care for our community.</p>
+    <p>
+      At Brew & Chill, every day is steeped in love, gratitude, and the simple joy of being present.
+    </p>
+    <div class="quote">“You don’t just drink coffee here — you feel it.”</div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" id="testimonials">
+    <h2>What Our Guests Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"Best cappuccino in town! I come here just to breathe and reset."</p>
+        <div class="name">— Ana G.</div>
+      </div>
+      <div class="testimonial">
+        <p>"Feels like home. The coffee is strong, and the vibes are stronger."</p>
+        <div class="name">— Malik T.</div>
+      </div>
+      <div class="testimonial">
+        <p>"Perfect place to write, sip, and let the world slow down."</p>
+        <div class="name">— Jess M.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Feed -->
+  <section class="section instagram-feed" id="instagram">
+    <h2>Follow Us on Instagram</h2>
+    <p>Catch the latest brews and behind-the-scenes at 
+      <a href="https://www.instagram.com/chillbrewcoffeeshop/" target="_blank" style="color: #f4c542;">@chillbrewcoffeeshop</a>
+    </p>
+    
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; align-items: center;">
+      <!-- Coffee shop image -->
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=80" alt="Small Coffee Shop" style="max-width: 400px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);" />
+      
+      <!-- Instagram embed iframe -->
+      <!-- Replace the src below with your updated SnapWidget embed code URL -->
+    </div>
+  </section>
+
+  <!-- Coffee Menu -->
+  <section class="section coffee-menu" id="menu">
+    <h2>☕ Our Coffee Menu</h2>
+    <dl>
+      <dt>Espresso</dt>
+      <dd>Rich, smooth, and the perfect start to any day.</dd>
+
+      <dt>Latte</dt>
+      <dd>Creamy milk paired with velvety espresso.</dd>
+
+      <dt>Cold Brew</dt>
+      <dd>Slow-steeped for 12 hours — bold and refreshing.</dd>
+
+      <dt>Matcha Latte</dt>
+      <dd>Earthy, green, and perfectly soothing.</dd>
+
+      <dt>Choco Mocha</dt>
+      <dd>Chocolate + coffee = happiness in a cup.</dd>
+    </dl>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - COZY CAFE</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      backdrop-filter: brightness(0.7);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+    }
+
+    nav a {
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a.active {
+      background-color: #f4c542;
+      color: #000;
+      transform: scale(1.1);
+    }
+
+    nav a:hover {
+      background-color: #f4c542;
+      color: #000;
+      transform: scale(1.1);
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 20px 40px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      color: #f4c542;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    p {
+      font-size: 18px;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .contact-container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: 30px auto;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .contact-container h2 {
+      color: #f4c542;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .contact-container p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      font-size: 0.9em;
+      color: #f1f1f1;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="about.html">About</a>
+    <a href="info.html">Info</a>
+    <a href="contact.html" class="active">Contact Us</a>
+  </nav>
+
+  <header>
+    <h1>COZY CAFE</h1>
+    <p>We'd love to hear from you. Here's how to get in touch:</p>
+  </header>
+
+  <div class="contact-container">
+    <h2>COZY CAFE Shop</h2>
+    <p><strong>Phone:</strong> 09126471958- COFFEE Manager</p>
+    <p><strong>Email:</strong> contact@COZY CAFE.com</p>
+    <p><strong>Location:</strong> San Ramon, Dinalupihan Bataan, Bldg. 69</p>
+  </div>
+
+  <footer>
+    &copy; 2025 COZY CAFE Shop – Freshly brewed thoughts welcome!
+  </footer>
+</body>
+</html>
